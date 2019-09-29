@@ -23,7 +23,15 @@ function previousSlide() {
   li[i].classList.add("on");
 }
 
-function nextSlideArrow() {}
+function nextSlideArrow(event) {
+  if (event.code == 39) {
+    nextSlide();
+  }
+
+  else (event.code == 37){
+      previousSlide();
+  }
+}
 
 nextButton.addEventListener("click", nextSlide);
 previousButton.addEventListener("click", previousSlide);
