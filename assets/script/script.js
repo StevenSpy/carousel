@@ -7,14 +7,21 @@ let i = 0;
 
 function nextSlide() {
   li[i].classList.remove("on");
-  i--;
+  i++;
   if (i >= document.li.length) {
     i = 0;
   }
   li[i].classList.add("on");
 }
 
-function previousSlide() {}
+function previousSlide() {
+  li[i].classList.remove("on");
+  i--;
+  if (i < 0) {
+    i = li.length - 1;
+  }
+  li[i].classList.add("on");
+}
 
 function nextSlideArrow() {}
 
