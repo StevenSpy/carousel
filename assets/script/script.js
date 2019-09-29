@@ -28,8 +28,8 @@ function nextSlideArrow(event) {
     nextSlide();
   }
 
-  else (event.code == 37){
-      previousSlide();
+  if (event.code == 37) {
+    previousSlide();
   }
 }
 
