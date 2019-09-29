@@ -5,7 +5,14 @@ const previousButton = document.querySelector(".previous");
 const li = document.querySelectorAll("li");
 let i = 0;
 
-function nextSlide() {}
+function nextSlide() {
+  li[i].classList.remove("on");
+  i--;
+  if (i >= document.li.length) {
+    i = 0;
+  }
+  li[i].classList.add("on");
+}
 
 function previousSlide() {}
 
